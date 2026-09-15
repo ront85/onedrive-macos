@@ -1,6 +1,30 @@
-# OneDrive Client for Linux
-[![Version](https://img.shields.io/github/v/release/abraunegg/onedrive?logo=github)](https://github.com/abraunegg/onedrive/releases)
-[![Release Date](https://img.shields.io/github/release-date/abraunegg/onedrive?logo=github)](https://github.com/abraunegg/onedrive/releases)
+# OneDrive for macOS
+
+An open-source, native macOS alternative to the Microsoft OneDrive client. This community fork brings OneDrive Personal, OneDrive for Business, Microsoft 365, and SharePoint libraries into Finder through Apple's File Provider framework.
+
+The macOS app is designed to feel at home on the Mac: sign in with Microsoft, choose the folders and company libraries you need, and work with them directly in Finder. Microsoft's OneDrive app is not required.
+
+> [!IMPORTANT]
+> This is an independent community project. It is not affiliated with, endorsed by, or supported by Microsoft. Do not run this app and Microsoft's OneDrive client against the same account and folders at the same time.
+
+## macOS features
+
+- Native Finder integration with placeholders and Files On-Demand.
+- OneDrive Personal, work or school accounts, and SharePoint document libraries.
+- Per-folder and global storage policies: **Online only**, **Smart cache**, or **Available offline**.
+- Fast folder browsing from locally cached metadata without downloading file contents.
+- Upload, download, create, edit, rename, move, and delete through Microsoft Graph.
+- Existing local OneDrive data is preserved during setup and Finder repair.
+- Menu bar controls, automatic launch at login, and a drag-to-Applications DMG installer.
+
+The current macOS build supports macOS 13 or later on Apple silicon. A public Developer ID-signed and notarized release is not available yet; source and local development builds require Xcode and Apple signing. See the [macOS installation and build guide](docs/macos.md) for requirements, setup, storage behaviour, safety checks, and DMG packaging.
+
+## Upstream sync engine
+
+This fork is built on the excellent [abraunegg/onedrive](https://github.com/abraunegg/onedrive) project and retains its mature command-line sync client for Linux, FreeBSD, and OpenBSD. The native macOS Finder app is maintained by this fork and is not part of the upstream project.
+
+[![Upstream Version](https://img.shields.io/github/v/release/abraunegg/onedrive?logo=github)](https://github.com/abraunegg/onedrive/releases)
+[![Upstream Release Date](https://img.shields.io/github/release-date/abraunegg/onedrive?logo=github)](https://github.com/abraunegg/onedrive/releases)
 
 [![Linux Test Build](https://github.com/abraunegg/onedrive/actions/workflows/testbuild.yaml/badge.svg)](https://github.com/abraunegg/onedrive/actions/workflows/testbuild.yaml)
 [![Linux Smoke Test](https://github.com/abraunegg/onedrive/actions/workflows/smoke-test.yaml/badge.svg)](https://github.com/abraunegg/onedrive/actions/workflows/smoke-test.yaml)
@@ -9,14 +33,9 @@
 
 [![E2E Testing - Master Status](https://github.com/abraunegg/onedrive/actions/workflows/e2e-master-status.yaml/badge.svg?branch=master)](https://github.com/abraunegg/onedrive/blob/master/docs/end_to_end_testing.md)
 
-A fully featured, free, open-source and actively maintained Microsoft OneDrive client that seamlessly supports OneDrive Personal, OneDrive for Business, Microsoft 365 (formerly Office 365), and SharePoint document libraries.
+A fully featured, free, open-source and actively maintained command-line Microsoft OneDrive client that seamlessly supports OneDrive Personal, OneDrive for Business, Microsoft 365 (formerly Office 365), and SharePoint document libraries.
 
 Designed for maximum flexibility and reliability, this powerful and highly configurable client works across all major Linux distributions, FreeBSD and OpenBSD. It can also be deployed in containerised environments using Docker or Podman. Supporting both one-way and two-way synchronisation modes, the client provides secure and efficient file syncing with Microsoft OneDrive services — tailored to suit both desktop and server environments.
-
-## macOS Finder Files On-Demand
-
-This repository also includes an experimental native macOS client that exposes OneDrive through Finder using Apple's File Provider framework. It is separate from the CLI sync client and requires a signed File Provider app. See the [macOS guide](docs/macos.md) for installation, source builds, cache policies, Finder repair, signing, and first-install validation.
-
 
 ## Project Background
 This project originated as a fork of the skilion client in early 2018, after a number of proposed improvements and bug fixes — including [Pull Requests #82 and #314](https://github.com/skilion/onedrive/pulls?q=author%3Aabraunegg) — were not merged and development activity of the skilion client had largely stalled. While it’s unclear whether the original developer was unavailable or had stepped away from the project - bug reports and feature requests remained unanswered for extended periods. In 2020, the original developer (skilion) confirmed they had no intention of maintaining or supporting their work ([reference](https://github.com/skilion/onedrive/issues/518#issuecomment-717604726)).
